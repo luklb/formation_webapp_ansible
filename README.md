@@ -14,4 +14,11 @@
 
 - git clone https://github.com/luklb/formation_webapp_ansible.git
 
+# Renvoyer les nouveaux fichier sur Git
 
+- git init
+- git add .
+- git config --global user.email "luklb29@live.fr"
+- git config --global user.name "lucas"
+- git commit -m "Ajout de xx"
+- git push -u origin main
