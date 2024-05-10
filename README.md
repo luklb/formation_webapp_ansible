@@ -12,6 +12,6 @@
 
 # Récupérer le git
 
-- git clone 
+- git clone https://github.com/luklb/formation_webapp_ansible.git
 
 
