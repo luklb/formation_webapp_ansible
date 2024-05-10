@@ -1,0 +1,16 @@
+---
+- hosts: prod
+  become: true
+  vars:
+    system_user: admin
+  vars_files:
+    - files/secrets/credentials.yml
+  pre_tasks:
+    - name: install docker
+      package: name=docker-ce state=present
+      when: ansible_distribution == "CentOS"
+    - name: create www-data
+      user: name=www-data state=present
+  roles:
+    - { role: ansible-role-containerized-wordpress }
+ 
